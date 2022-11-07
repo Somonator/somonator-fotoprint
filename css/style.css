@@ -1,0 +1,147 @@
+body {
+    background: #f1f1f1;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.4em;
+    min-height: 100vh;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    margin: 0;
+    margin-bottom: 5px;
+}
+textarea {
+    resize: vertical;
+}
+
+.d-flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.field-wrap {
+    margin-bottom: 5px;
+}
+
+.btn {
+    background: #ffffff;
+	outline: none;
+    border-width: 1px;
+    border-style: solid;	
+    border-color: #0073aa #006799 #006799;
+    border-radius: 3px;	
+    box-shadow: 0 1px 0 #000000;
+    height: 28px;	
+    font-size: 13px;	
+    color: #000000;
+	line-height: 26px;
+	white-space: nowrap;
+	text-decoration: none;
+	display: table;	
+	padding: 0 10px 1px;
+	margin-bottom: 10px;
+    -webkit-appearance: none;
+    cursor: pointer;	
+}
+
+
+.editor-wrap {
+    background: #ffffff;
+    border: 1px solid #000000;
+    margin: 25px 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.editor-wrap,
+.editor-wrap .print-canvas {
+    width: 1100px;
+	height: 780px;   
+}
+.editor-wrap .print-canvas {
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+.editor-wrap .img-caption {
+    font-size: 20px;
+    color: #ffffff;
+    position: absolute;
+    line-height: normal;
+}
+
+
+.editor-manage {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    width: 220px;    
+    max-height: calc(100vh - 50px);
+    padding: 15px;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    overflow-y: auto;
+    transition: all 0.5s;
+}
+.editor-manage .manage-block {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.editor-manage .manage-block .manage-title {
+    font-size: 16px;
+}
+.editor-manage input,
+.editor-manage select,
+.editor-manage textarea {
+    width: 100%;
+    max-width: 200px;
+}
+.editor-manage .reset {
+    margin-top: 30px;
+}
+
+
+@media print {
+    .editor-wrap {
+        border-color: transparent;
+    }
+    .editor-manage {
+        display: none;
+    }
+}

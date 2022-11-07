@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Fotoprint</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex-center">
+    <div id="editor_wrap" class="editor-wrap">
+        <img id="print_img" src="#" class="print-canvas" alt="" draggable="false" style="display: none;">
+        <div id="img_caption" class="img-caption" style="display: none;"></div>
+    </div>
+
+    <form id="editor_manage" class="editor-manage" autocomplete="off">
+        <div class="manage-block">
+            <h2 class="manage-title">Для начала</h2>
+
+            <div class="field-wrap">
+                <label for="">Выберите фото:</label>
+                <input id="img_input" type="file" accept="image/png, image/jpeg" name="foto-input">
+            </div>
+        </div>
+        <div class="manage-block">
+            <h2 class="manage-title">Холст</h2>
+
+            <input type="button" value="Повернуть" class="btn rotate-canvas">
+
+            <div class="field-wrap">
+                <label for="">Ширина:</label>
+                <input type="number" name="img-width" value="1100">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Высота:</label>
+                <input type="number" name="img-height" value="780">
+            </div>
+        </div>
+        <div class="manage-block">
+            <h2 class="manage-title">Расположение</h2>
+
+            <div class="field-wrap">
+                <label for="">Заполнение:</label>
+                <select name="img-size">
+                    <option value="cover">Заполнить кадр</option>
+                    <option value="contain">Уместить фото полностью</option>
+                </select>
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Смещение по X:</label>
+                <input type="number" name="img-pos-x" value="0">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Смещение по Y:</label>
+                <input type="number" name="img-pos-y" value="0">
+            </div>
+        </div>
+
+        <div class="manage-block">
+            <h2 class="manage-title">Цвета</h2>
+
+            <div class="field-wrap">
+                <label for="">Яркость <span>0</span>%:</label>
+                <input type="range" name="img-brightness" min="0" max="200" value="100">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Контрастность <span>0</span>%:</label>
+                <input type="range" name="img-contrast" min="0" max="200" value="100">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Насыщеность <span>0</span>%:</label>
+                <input type="range" name="img-saturate" min="0" max="200" value="100">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Обесцвечивание <span>0</span>%:</label>
+                <input type="range" name="img-grayscale" min="0" max="100" value="0">
+            </div>
+        </div>
+
+        <div class="manage-block">
+            <h2 class="manage-title">Подпись</h2>
+
+            <div class="field-wrap">
+                <label for="">Текст подписи:</label>
+                <input type="text" name="caption-title">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Размер текста подписи:</label>
+                <input type="number" name="caption-font-size" value="80">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Цвет подписи:</label>
+                <input type="color" name="caption-color" value="#ffffff">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Расположение:</label>
+                <select name="caption-position" id="">
+                    <option value="top-left">Сверху слева</option>
+                    <option value="top-right">Сверху справа</option>
+                    <option value="bottom-right" selected>Снизу справа</option>
+                    <option value="bottom-left" >Снизу слева</option>
+                </select>
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Положение по X:</label>
+                <input type="number" name="caption-pos-x" value="25">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Положение по Y:</label>
+                <input type="number" name="caption-pos-y" value="25">
+            </div>
+
+            <div class="field-wrap">
+                <label for="">Свои стили для подписи:</label>
+                <textarea name="caption-custom-css" rows="10"></textarea>
+            </div>
+        </div>
+
+        <input type="reset" value="Сбросить" class="btn reset">
+
+        <input type="submit" value="Печать" class="btn submit">
+    </form>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/printThis.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
